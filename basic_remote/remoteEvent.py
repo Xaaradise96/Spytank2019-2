@@ -1,5 +1,6 @@
 import click
 import spytank
+import time 
 
 z  = "z : avancer "
 s  = "s : reculer"
@@ -57,4 +58,7 @@ while True :
 
     elif  lettre=="x":
         spytank.stop()
+    
+    time.sleep(1)
+
     print("tu as tapé la lettre:", lettre)
