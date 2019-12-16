@@ -10,13 +10,15 @@ vp = "+ : plus vite"
 vm = "- : moins vite"
 x  = "x : stop "
 vitesse = 150
+continuer = True 
+
 direction = ""
 
 
 
 print(z,s,q,d,vp,vm,x)
 
-while True :
+while continuer :
     lettre = click.getchar()
     if lettre =="z":
         spytank.avance(vitesse)
@@ -56,9 +58,12 @@ while True :
         elif direction == 4:
             spytank.droite(vitesse) 
 
-    elif  lettre=="x":
+    elif  lettre == "x":
         spytank.stop()
-    
+    elif lettre == "f":
+        continuer = False
+        spytank.stop()
+
     time.sleep(1)
 
     print("tu as tapé la lettre:", lettre)
