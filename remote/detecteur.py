@@ -2,6 +2,7 @@ import spytank
 from threading import Thread
 from gtts import tts
 import os
+import time
 
 class newDetecteur(Thread):
     
@@ -16,7 +17,9 @@ class newDetecteur(Thread):
         distance = spytank.litDistance()
         if  distance < 10:
             self.stop = True
+            spytank.stop()
             os.system("mpg321 bip.mp3")
         else:
             self.stop = False
+        time.sleep(0.2)
 
