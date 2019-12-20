@@ -1,6 +1,7 @@
 import network
 import click 
 
+
 IP = "10.0.0.184"
 PORT = 1111
 z  = "z : avancer "
@@ -11,6 +12,7 @@ vp = "+ : plus vite"
 vm = "- : moins vite"
 x  = "x : stop "
 a = "a : allumer ou eteindre les leds"
+
 
 
 print(z,s,q,d,vp,vm,x)
